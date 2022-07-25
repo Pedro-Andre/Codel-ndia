@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradiennt: linear-gradient(130.02deg, #628E75 0.66%, #1A4855 83.32%);
+    --gradientButton: linear-gradient(130.02deg, #406D66 0.66%, #356361 83.32%);
+    --main: #658E76;
+    --mainDark: #1A4855;
+    --white: #f9f9f9;
+    --poppins: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--gradiennt);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 10rem 2rem 10rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 3.2rem;
+}
+
+
+/* CONTENT */
+.content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+    width: 100%;
+}
+
+.title {
+    color: var(--white);
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+    flex: 1 1 300px;
+}
+
+.big-title {
+    flex: 1 1 300px;
+    color: var(--white);
+    font-family: var(--poppins);
+    font-weight: 900;
+    font-size: 6.8rem;
+    line-height: 7.4rem;
+    margin-bottom: 2.5rem;
+    max-width: 50rem;
+}
+
+.about {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: var(--poppins);
+    max-width: 50rem;
+    line-height: 2.8rem;
+    margin-bottom: 4.6rem;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 0rem;
+    flex: 1 1 300px;
+}
+
+.button1,
+.button2 {
+    background: var(--main);
+    width: 25.5rem;
+    height: 4.5rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    position: relative;
+}
+
+.button1 a,
+.button2 a {
+    font-family: var(--poppins);
+    color: var(--white);
+    font-size: 1.6rem;
+    z-index: 2;
+}
+
+.button1 {
+    gap: 1.4rem;
+}
+
+.button2::after {
+    content: '';
+    background: var(--gradientButton);
+    clip-path: polygon(10% 0, 99% 0, 90% 100%, 1% 100%);
+    inset: .3rem;
+    position: absolute;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 400px;
+}
+
+@media (max-width:600px) {
+    header {
+        padding: 1.6rem;
+    }
+
+    .nav-icons {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        gap: 1.2rem;
+    }
+
+    .big-title {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .button1,
+    .button2 {
+        width: 22.5rem;
+        height: 4.5rem;
+        padding: .5rem;
+    }
+
+    .button1 a,
+    .button2 a {
+        font-size: 1.2rem;
+    }
+}
