@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #5c913b;
+  --yellow: #ffa200;
+  --red: #cf3031;
+  --pink: #ffd4c9;
+  --white: #fef6f4;
+  --gray: #616161;
+  --gray-200: #2e2e2e;
+  --sora: 'Sora', sans-serif;
+  ;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--sora);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* HERO IMG */
+.hero {
+  background-image: url(../imgs/bg.png);
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SEÇÃO MAIS VENDIDOS */
+.mais-vendidos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 90vh;
+  column-gap: 3.2rem;
+  row-gap: 6rem;
+  padding: 6rem 3rem;
+  position: relative;
+}
+
+.title {
+  color: var(--gray-200);
+  font-size: 3rem;
+  position: absolute;
+  top: 6rem;
+  font-weight: 600;
+}
+
+/* CARD */
+.card {
+  flex: 1 1 25.6rem;
+  min-height: 27.5rem;
+  max-width: 25.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--white);
+  border-radius: 2.5rem;
+  position: relative;
+  text-align: center;
+  top: 3rem;
+  cursor: pointer;
+}
+
+.card img {
+  position: absolute;
+  top: -5rem;
+  transition: all .3s;
+}
+
+.card:hover .card-pizza {
+  filter: drop-shadow(0 1rem 1rem #2e2e2e30);
+  top: -6rem;
+}
+
+.card .icon {
+  background: var(--pink);
+  border: .2rem solid var(--red);
+  padding: 1rem;
+  border-radius: 1.4rem;
+  top: -1.5rem;
+  right: 1rem;
+}
+
+.card .nome-pizza {
+  color: var(--gray-200);
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  margin-top: 6rem;
+}
+
+.card p {
+  font-size: 1.4rem;
+  color: var(--gray);
+  line-height: 2rem;
+}
+
+.card .preco {
+  color: var(--gray-200);
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.card button {
+  background: var(--yellow);
+  border: none;
+  border-radius: 100vmax;
+  padding: 1rem 3rem;
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  position: absolute;
+  bottom: -1.5rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.card button:hover {
+  scale: .9;
+}
+
+/* IMGS DA SEÇÃO */
+.img {
+  position: absolute;
+  z-index: 99;
+}
+
+.folhas {
+  left: 0;
+  top: -5rem;
+}
+
+.peixe {
+  left: 20%;
+  top: 5%;
+}
+
+.cogumelo {
+  right: 10%;
+  top: 5%;
+}
+
+.folha {
+  z-index: -1;
+  right: 0;
+}
+
+.pimenta {
+  left: 0;
+  bottom: -2rem;
+}
+
+/* SEÇÃO SOBRE */
+.sobre {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10rem;
+  position: relative;
+  row-gap: 2rem;
+}
+
+.sobre img {
+  max-width: 44.8rem;
+}
+
+.sobre .text {
+  max-width: 50rem;
+  min-height: 30rem;
+  padding-inline: 1rem;
+}
+
+.sobre h3 {
+  color: var(--gray-200);
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: -.2rem;
+}
+
+.sobre .i {
+  color: var(--yellow);
+}
+
+.sobre .z-1 {
+  color: var(--red);
+}
+
+.sobre .z-2 {
+  color: var(--green);
+}
+
+.sobre p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  padding-block: 2rem;
+  position: relative;
+}
+
+.sobre button {
+  background: var(--yellow);
+  border: none;
+  border-radius: 100vmax;
+  padding: 1rem 5rem;
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.sobre button:hover {
+  scale: .9;
+}
+
+/* IMAGEN DA SEÇÃO */
+.pizza {
+  left: 1rem;
+  top: 5rem;
+}
+
+.tomate {
+  right: 9rem;
+  top: 0;
+}
+
+.pizza-prato {
+  right: 1rem;
+  bottom: -5rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--gray-200);
+  padding-block: 1rem;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+/* MEDIAS */
+@media (max-width: 1024px) {
+  .img {
+    display: none;
+  }
+
+  .mais-vendidos {
+    row-gap: 9rem;
+    padding: 10rem 1rem 0 1rem;
+  }
+
+  .mais-vendidos .title {
+    margin-top: -3rem;
+  }
+}
+
+@media (max-width:400px) {
+  .hero img {
+    width: 60%;
+  }
+
+  .img,
+  .sobre img {
+    display: none;
+  }
+
+  .mais-vendidos .title {
+    font-size: 2rem;
+  }
+
+  .sobre .text,
+  .sobre h3 {
+    text-align: center;
+  }
+
+  .sobre h3 {
+    font-size: 3rem;
+  }
+
+  .sobre p {
+    font-size: 1.3rem;
+  }
+
+  .sobre button {
+    margin-inline: auto;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
