@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font: "Sora", sans-serif;
+  --primary: #e3d2bc;
+  --primary-opacity: #e3d2bc20;
+  --black: #111;
+  --white: #f9f9f9;
+  --gray: #585858;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://cdn1.dotesports.com/wp-content/uploads/sites/3/2021/11/04211845/ezgif-2-b0fc567224a3-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* nav */
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 1.5rem;
+}
+
+.nav .netflix {
+  margin-left: 40rem;
+}
+
+.logo-link img {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.logo-link:hover img {
+  scale: .9;
+  filter: drop-shadow(0 0 .5rem var(--white));
+}
+
+/* LOW OPACITY LINE */
+.card-container {
+  background: var(--primary-opacity);
+  width: 100%;
+  max-width: 125rem;
+  height: 11rem;
+  border-radius: 0 0 0 2.4rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 72.4rem;
+  height: 18.7rem;
+  background: var(--black);
+  position: absolute;
+  bottom: 3.2rem;
+  left: -3rem;
+  clip-path: polygon(2rem 0, 100% 0, 100% 100%, 0 100%, 0 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0.5rem;
+  background: var(--primary);
+  clip-path: polygon(1.9rem 0, 100% 0, 100% 100%, 0 100%, 0 1.4rem);
+}
+
+/* VIDEO THUMBNAIL */
+.card-container .img {
+  z-index: 2;
+  position: absolute;
+  left: -9rem;
+  bottom: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-container .img a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.card-container .img:hover {
+  filter: brightness(1.5);
+}
+
+/* PLAY ICON */
+.card-container .img .play-icon {
+  position: absolute;
+  font-size: 5.6rem;
+  color: var(--white);
+}
+
+/* CARD TEXTS */
+.texts {
+  margin-left: 15rem;
+}
+
+.text {
+  font-size: 3.2rem;
+}
+
+.date {
+  font-size: 2rem;
+  color: var(--gray);
+  margin-top: 2rem;
+}
+
+/* MEDIAS */
+@media (max-width: 1200px) {
+  .card-container {
+    max-width: 100rem;
+  }
+
+  .card {
+    left: -1rem;
+  }
+
+  .card-container .img {
+    left: -5em;
+  }
+
+  .texts {
+    margin-left: 19rem;
+  }
+}
+
+@media (max-width: 1048px) {
+  .card-container {
+    max-width: 80rem;
+  }
+
+  .card {
+    left: -4rem;
+  }
+
+  .card-container .img {
+    left: -6rem;
+  }
+
+  .texts {
+    margin-left: 22rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav .netflix {
+    margin-left: 0;
+  }
+
+  .card-container {
+    max-width: 50rem;
+  }
+
+  .card {
+    left: -6rem;
+  }
+
+  .card-container .img {
+    left: -9rem;
+  }
+
+  .text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .nav .logo-link {
+    width: 8rem;
+  }
+
+  .card-container {
+    max-width: 30rem;
+  }
+
+  .card {
+    left: -5rem;
+    width: 34rem;
+  }
+
+  .card-container .img {
+    left: -9rem;
+    width: 20rem;
+    bottom: 6rem;
+  }
+
+  .texts {
+    margin-left: 17rem;
+    padding-inline: 0.5rem;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-container {
+    max-width: 30rem;
+  }
+
+  .card {
+    left: -1rem;
+    width: 30rem;
+    height: 15rem;
+  }
+
+  .card-container .img {
+    left: -1rem;
+    width: 17rem;
+    bottom: 5rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .text,
+  .date {
+    text-align: center;
+  }
+}
